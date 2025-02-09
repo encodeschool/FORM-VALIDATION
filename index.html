@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <i class='bx bx-message-alt-detail'></i>
+                        <h1>Please fill the form</h1>
+                        <form>
+                            <div class="input_wrapper">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" onkeyup="validateName();" placeholder="Enter full name">
+                                <span id="name-error"></span>
+                            </div>
+                            <div class="input_wrapper">
+                                <label for="phone">Phone No</label>
+                                <input type="text" id="phone" onkeyup="validatePhone();" placeholder="Enter Phone number">
+                                <span id="phone-error"></span>
+                            </div>
+                            <div class="input_wrapper">
+                                <label for="email">Email No</label>
+                                <input type="text" id="email" onkeyup="validateEmail();" placeholder="Enter email">
+                                <span id="email-error"></span>
+                            </div>
+                            <div class="input_wrapper">
+                                <label for="message">Message No</label>
+                                <textarea name="" rows="5" onkeyup="validateMessage();" placeholder="Enter your message" id="message"></textarea>
+                                <span id="message-error"></span>
+                            </div>
+                            <button onclick="return validateForm();">Submit</button>
+                            <span id="submit-error"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
